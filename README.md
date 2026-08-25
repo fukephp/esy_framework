@@ -16,7 +16,7 @@ No application code lives here. Use **scaffold-project** to copy this layout int
 
 ## Scaffold a new project
 
-This repo is the canonical template at `C:\Users\Faruk\Projects\esy_framework`.
+This repo is the canonical template. Clone or keep it wherever you like; scaffold creates a **sibling** folder next to it.
 
 ### Slash command
 
@@ -24,7 +24,7 @@ This repo is the canonical template at `C:\Users\Faruk\Projects\esy_framework`.
 /scaffold-project my_app
 ```
 
-Creates `C:\Users\Faruk\Projects\my_app` with the framework layout (no app code), runs `git init`, and leaves `CONTEXT.md` empty for you to fill.
+Creates a sibling folder named `my_app` with the framework layout (no app code), runs `git init`, and leaves `CONTEXT.md` empty for you to fill.
 
 ### Skill
 
