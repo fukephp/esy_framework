@@ -42,9 +42,9 @@ Ask the agent to **scaffold a project** / **new project from framework** / **boo
 ### After scaffold
 
 1. Open the new folder as the Cursor workspace.
-2. Run **grill-me** before locking product and architecture.
+2. Run **grill-me** before locking product and architecture (no app code yet).
 3. Fill `.cursor/CONTEXT.md` (including app root, stories source, and domain triggers when ready) and expand `docs/` as decisions lock.
-4. Add application code when ready; keep docs and `.cursor/` at the git root.
+4. Add application code when ready; keep docs and `.cursor/` at the git root. After that, use **grill-with-docs** / `/grill-with-docs` so glossary and ADRs land on disk.
 5. When shipping one story with an answer key, use **story-loop** / `/story-loop` (see `.cursor/loops/PLAYBOOK.md`).
 
 ## Improving this template
@@ -55,6 +55,6 @@ Change `esy_framework` here when you want better structure for the next scaffold
 
 1. Fill `.cursor/CONTEXT.md` for the product.
 2. Expand `docs/mvp/` and `docs/architecture/` as decisions lock (numbered docs when decisions lock — not pre-created empty files).
-3. Stress-test plans with the **grill-me** skill before building.
+3. Stress-test plans with **grill-me** (no code / writes nothing) or **grill-with-docs** (codebase + glossary/ADRs).
 4. Add app code in a folder you choose; keep docs and `.cursor/` at the git root.
 5. Use **story-loop** for one story → one PR once verify commands exist.
