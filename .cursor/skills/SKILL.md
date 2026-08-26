@@ -13,6 +13,7 @@ Follow `.cursor/CONTEXT.md` first. Then open the matching skill folder.
 |-------|-------------|
 | [grill-me](grill-me/SKILL.md) | **Default** for stress-testing a plan or design; user says "grill me" |
 | [scaffold-project](scaffold-project/SKILL.md) | New sibling project from this framework layout (`/scaffold-project`) |
+| [story-loop](story-loop/SKILL.md) | Story-sized Loop Engineering: answer key → Cloud Agent → Bugbot (`/story-loop`) |
 | [custom-feature-skills](custom-feature-skills/SKILL.md) | Adding or changing a product feature against MVP epics/stories |
 | [deploy-staging](deploy-staging/SKILL.md) | Deploying or preparing a staging release |
 
@@ -26,4 +27,4 @@ Follow `.cursor/CONTEXT.md` first. Then open the matching skill folder.
 | [pricing-page](pricing-page/SKILL.md) | Marketing pricing pages (when the user asks) |
 | [build-awwwards-quality-sites](build-awwwards-quality-sites/SKILL.md) | Marketing polish / motion-rich sites (when the user asks) |
 
-Do not invent a parallel workflow. If the task is a slash command (`/generate-docs`, `/run-tests`, `/scaffold-project`), use `.cursor/commands/` instead.
+Do not invent a parallel workflow. If the task is a slash command (`/generate-docs`, `/run-tests`, `/scaffold-project`, `/story-loop`), use `.cursor/commands/` instead.

@@ -25,6 +25,14 @@ Read `.cursor/CONTEXT.md`. Prefer `docs/mvp/` and `docs/architecture/` over inve
 
 Before locking a plan or design, use the **grill-me** skill (`.cursor/skills/grill-me/`) until shared understanding. Prefer grilling over guessing.
 
+## Story loops
+
+For one story → one PR with an answer key and Cloud Agent brief, use **story-loop** (`.cursor/skills/story-loop/`, `/story-loop`) and `.cursor/loops/PLAYBOOK.md`. Coding loops need an app root with verify commands named in CONTEXT.
+
 ## New projects from this framework
 
 To copy this layout into a sibling folder under `Projects/`, use the **scaffold-project** skill or `/scaffold-project <name>`. See `README.md` and `.cursor/skills/scaffold-project/SKILL.md`.
+
+## Improving this template
+
+Edit `esy_framework` directly when you want better defaults for future projects. New scaffolds pick up those changes. Do not sync framework updates into already-scaffolded projects (v1). Do not invent a separate “improve framework” skill.

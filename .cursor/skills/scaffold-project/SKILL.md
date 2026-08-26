@@ -13,18 +13,16 @@ Copy the canonical Cursor AI framework layout into a new sibling project. Stop b
 
 ## Canonical template
 
-Always read from:
+Always use the **esy_framework** repo as the template source (this git root when you are working inside it).
 
-`C:\Users\Faruk\Projects\esy_framework`
-
-Do **not** use the current workspace as the template source (even if this skill was copied into another project). If that path is missing, stop and ask.
+Do **not** use a previously scaffolded project as the template source (even if this skill was copied there). If you cannot locate the framework repo, stop and ask.
 
 ## Inputs
 
 1. Require **one** project folder name (e.g. `my_app`, `esyres_v2`).
 2. If the user did not give a name, ask for it before copying.
 3. Validate: non-empty; only letters, numbers, `_`, `-`. Reject path separators and `..`.
-4. Target path: `C:\Users\Faruk\Projects\<name>`.
+4. Target path: a **sibling** folder next to the framework repo (`../<name>`).
 
 ## Conflicts
 
@@ -38,7 +36,7 @@ Copy the full framework tree into the target **except**:
 - `.git/` (do not copy history)
 - `.cursor/plans/` (local noise)
 
-Keep: skills, hooks, commands, rules, docs stubs, `refs/.gitkeep`, `AGENTS.md`, `DESIGN.md`, `README.md`, `.gitignore`, and this skill/command.
+Keep: skills (including grill-me, story-loop, scaffold-project), `.cursor/loops/`, hooks, commands, rules, docs stubs, `refs/.gitkeep`, `AGENTS.md`, `DESIGN.md`, `README.md`, `.gitignore`, and this skill/command.
 
 ## Steps (agent executes — no committed script)
 
