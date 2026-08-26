@@ -27,7 +27,7 @@ Before locking a plan or design, use the **grill-me** skill (`.cursor/skills/gri
 
 ## Story loops
 
-For one story → one PR with an answer key and Cloud Agent brief, use **story-loop** (`.cursor/skills/story-loop/`, `/story-loop`) and `.cursor/loops/PLAYBOOK.md`. Coding loops need an app root with verify commands named in CONTEXT.
+For one story → one PR with an approved answer key, use **story-loop** (`.cursor/skills/story-loop/`, `/story-loop`) and `.cursor/loops/PLAYBOOK.md`. Runtime is Hybrid: Local default; Cloud on `unattended`. Coding loops need an app root with verify commands named in CONTEXT.
 
 ## New projects from this framework
 

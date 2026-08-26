@@ -2,7 +2,7 @@
 
 > Copy this file to `.cursor/loops/answer-keys/STORY-xx.md` (use the real story id).
 > Fill every section. Replace TBD after the app root named in CONTEXT has real verify commands.
-> Do not start a Cloud Agent until a human has approved this file.
+> Do not implement (Local or Cloud) until a human has approved this file.
 
 ## Meta
 
@@ -52,7 +52,7 @@ Explicit non-goals for this PR (later phase, adjacent stories, refactors not req
 
 - …
 
-## Cloud Agent instructions
+## Implementer instructions
 
 1. Read this answer key and `.cursor/CONTEXT.md`. Follow `.cursor/skills/custom-feature-skills/SKILL.md` for product constraints.
 2. Implement **only** what this key requires. Do not expand scope or invent stack.
