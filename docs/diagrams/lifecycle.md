@@ -19,7 +19,7 @@ flowchart TD
   approve -->|no| grill
   approve -->|yes| verify{App root + verify<br/>commands ready?}
 
-  verify -->|yes| loop["story-loop<br/>Cloud Agent brief"]
+  verify -->|yes| loop["story-loop<br/>Local default; Cloud on unattended"]
   loop --> impl["Implement → verify<br/>iteration cap"]
   impl --> pr[Open PR]
   pr --> bugbot[Bugbot on PR]
@@ -45,7 +45,7 @@ flowchart TD
 2. Lock product/architecture truth before inventing behavior or stack.
 3. Clear fog (optional map) and grill open decisions.
 4. Approve a pass/fail answer key.
-5. When verify exists: story-loop → PR → Bugbot → you merge.
+5. When verify exists: story-loop (Local default; Cloud on `unattended`) → PR → Bugbot → you merge.
 
 ## Dashed branch
 

@@ -35,7 +35,7 @@ Do not invent a different stack. Do not scaffold app code unless the user asks.
 | `hooks/` | Scripts wired in `hooks.json` (session injects this file) |
 | `skills/grill-me/` | Relentless interview of a plan or design until shared understanding — default before locking plans |
 | `skills/scaffold-project/` | Copy this framework into a new sibling project under `Projects/` |
-| `skills/story-loop/` | Story-sized Loop Engineering: answer key → Cloud Agent brief → Bugbot |
+| `skills/story-loop/` | Story-sized Loop Engineering: answer key → Hybrid implement → Bugbot |
 | `skills/custom-feature-skills/` | How to add a feature against epics/stories |
 | `skills/deploy-staging/` | How to ship to staging |
 | `skills/tailwindcss/` | Tailwind utility-first UI |
@@ -56,4 +56,4 @@ Do not invent a different stack. Do not scaffold app code unless the user asks.
 6. Before locking a plan or design, use **grill-me**.
 7. To bootstrap a new sibling project from this framework, use **scaffold-project** or `/scaffold-project`.
 8. Use MengTo UI skills when the user asks for Tailwind, design-first prompting, landing, pricing, or marketing polish. Do not scaffold a marketing site unless asked.
-9. Story loops: use `skills/story-loop/` and `loops/PLAYBOOK.md` for one story → one PR. Coding loops need an app root with real verify commands; until then use plan-gate only (map / answer key). Fill stories source, app root, and domain triggers above when locked. Prefer grill-me while product fog is open.
+9. Story loops: use `skills/story-loop/` and `loops/PLAYBOOK.md` for one story → one PR. Runtime is Hybrid: Local default; Cloud on `unattended` (short paste, no `briefs/` folder). Coding loops need an app root with real verify commands; until then use plan-gate only (map / answer key). Fill stories source, app root, and domain triggers above when locked. Prefer grill-me while product fog is open.
