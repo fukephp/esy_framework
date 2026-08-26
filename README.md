@@ -10,8 +10,8 @@ No application code lives here. Use **scaffold-project** to copy this layout int
 |------|------|
 | `AGENTS.md` | How agents work in this repo |
 | `DESIGN.md` | Design pack index (fill when designs lock) |
-| `.cursor/` | Context, rules, skills, commands, hooks |
-| `docs/` | Product, architecture, stories, tasks, diagrams |
+| `.cursor/` | Context, rules, skills, commands, hooks, loops |
+| `docs/` | Product, architecture, stories, tasks, diagrams (index stubs only) |
 | `refs/` | Design reference packs (empty until you add them) |
 
 ## Scaffold a new project
@@ -34,14 +34,18 @@ Ask the agent to **scaffold a project** / **new project from framework** / **boo
 
 1. Open the new folder as the Cursor workspace.
 2. Run **grill-me** before locking product and architecture.
-3. Fill `.cursor/CONTEXT.md` and expand `docs/` as decisions lock.
+3. Fill `.cursor/CONTEXT.md` (including app root, stories source, and domain triggers when ready) and expand `docs/` as decisions lock.
 4. Add application code when ready; keep docs and `.cursor/` at the git root.
+5. When shipping one story with an answer key, use **story-loop** / `/story-loop` (see `.cursor/loops/PLAYBOOK.md`).
 
-Improvements to this framework only affect **new** scaffolds (no sync into old projects in v1).
+## Improving this template
+
+Change `esy_framework` here when you want better structure for the next scaffold. New projects get the update; already-scaffolded repos are not synced in v1.
 
 ## Getting started (in a project)
 
 1. Fill `.cursor/CONTEXT.md` for the product.
-2. Expand `docs/mvp/` and `docs/architecture/` as decisions lock.
+2. Expand `docs/mvp/` and `docs/architecture/` as decisions lock (numbered docs when decisions lock — not pre-created empty files).
 3. Stress-test plans with the **grill-me** skill before building.
 4. Add app code in a folder you choose; keep docs and `.cursor/` at the git root.
+5. Use **story-loop** for one story → one PR once verify commands exist.
