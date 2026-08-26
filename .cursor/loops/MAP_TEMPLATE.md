@@ -21,7 +21,7 @@
 ## Notes
 
 - Consult: `.cursor/CONTEXT.md`, `docs/mvp/`, `docs/architecture/`, `docs/stories/` when present
-- Skills: `.cursor/skills/custom-feature-skills/SKILL.md`, grill-me style for open decisions
+- Skills: `.cursor/skills/custom-feature-skills/SKILL.md`; grill-me style for open decisions; grill-with-docs when app code exists
 - Standing preferences for this effort:
 
 ## Decisions so far

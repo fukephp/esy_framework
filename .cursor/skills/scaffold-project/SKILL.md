@@ -36,7 +36,7 @@ Copy the full framework tree into the target **except**:
 - `.git/` (do not copy history)
 - `.cursor/plans/` (local noise)
 
-Keep: skills (including grill-me, story-loop, scaffold-project), `.cursor/loops/`, hooks, commands, rules, docs stubs, `refs/.gitkeep`, `AGENTS.md`, `DESIGN.md`, `README.md`, `.gitignore`, and this skill/command.
+Keep: skills (including grill-me, grill-with-docs, story-loop, scaffold-project), `.cursor/loops/`, hooks, commands, rules, docs stubs, `refs/.gitkeep`, `AGENTS.md`, `DESIGN.md`, `README.md`, `.gitignore`, and this skill/command.
 
 ## Steps (agent executes — no committed script)
 

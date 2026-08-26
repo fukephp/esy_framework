@@ -74,7 +74,7 @@ Then set map Status to `compiled`. Do not invent pass/fail checks for leftover f
 
 1. Pick a story from the stories source named in CONTEXT.
 2. Apply the **fog gate**. If non-trivial: create/update `.cursor/loops/maps/STORY-xx.md` from `MAP_TEMPLATE.md`.
-3. Grill **one open decision at a time** (grill-me style); update the map. Graduate fog into open decisions only when the question is sharp.
+3. Grill **one open decision at a time** (grill-me style; **grill-with-docs** once app code exists); update the map. Graduate fog into open decisions only when the question is sharp.
 4. When fog and opens are clear, get your OK → **compile** `.cursor/loops/answer-keys/STORY-xx.md` from Decisions so far + Out of scope + verify placeholders. (Sharp path: draft the key without a map.)
 5. **You approve** the answer key (Status `approved`; every check concrete).
 6. Use the `story-loop` skill. Default (`story-loop STORY-xx`): implement in this chat against the key. Opt-in Cloud (`story-loop STORY-xx unattended`): emit a short paste block only — do not write a brief file.
@@ -116,3 +116,4 @@ Then set map Status to `compiled`. Do not invent pass/fail checks for leftover f
 - Product constraints while implementing: `.cursor/skills/custom-feature-skills/SKILL.md`
 - Tests command: `.cursor/commands/run-tests.md`
 - Grill-me: `.cursor/skills/grill-me/SKILL.md`
+- Grill-with-docs: `.cursor/skills/grill-with-docs/SKILL.md`

@@ -4,7 +4,7 @@ This git root is the Cursor/docs workspace. Application code is not part of this
 
 ## Layout
 
-- `docs/` — product (`docs/mvp/`) and architecture (`docs/architecture/`); also stories, tasks, diagrams
+- `docs/` — product (`docs/mvp/`) and architecture (`docs/architecture/`); also stories, tasks, diagrams; lazy `docs/glossary.md` and `docs/adr/` from grill-with-docs
 - `.cursor/` — rules, skills, commands, hooks
 - `refs/` — design packs when locked
 - `AGENTS.md` — this file
@@ -23,7 +23,10 @@ Read `.cursor/CONTEXT.md`. Prefer `docs/mvp/` and `docs/architecture/` over inve
 
 ## Plans and designs
 
-Before locking a plan or design, use the **grill-me** skill (`.cursor/skills/grill-me/`) until shared understanding. Prefer grilling over guessing.
+Before locking a plan or design, prefer grilling over guessing:
+
+- **grill-me** (`.cursor/skills/grill-me/`) — no app code, or a throwaway interview; writes nothing
+- **grill-with-docs** (`.cursor/skills/grill-with-docs/`, `/grill-with-docs`) — application code exists; writes `docs/glossary.md` and `docs/adr/` as terms and hard decisions lock. Do not treat `.cursor/CONTEXT.md` as a glossary.
 
 ## Story loops
 

@@ -13,7 +13,7 @@ flowchart TD
   pick --> fog{Fog gate}
   fog -->|non-trivial| map["Wayfinder-lite map<br/>.cursor/loops/maps/"]
   fog -->|sharp path| grill
-  map --> grill["grill-me<br/>one decision at a time"]
+  map --> grill["grill-me or grill-with-docs<br/>one decision at a time"]
   grill --> key["Compile answer key<br/>.cursor/loops/answer-keys/"]
   key --> approve{You approve key?}
   approve -->|no| grill
@@ -43,7 +43,7 @@ flowchart TD
 
 1. Scaffold a sibling project from this template.
 2. Lock product/architecture truth before inventing behavior or stack.
-3. Clear fog (optional map) and grill open decisions.
+3. Clear fog (optional map) and grill open decisions (grill-me with no app code; grill-with-docs once a codebase exists).
 4. Approve a pass/fail answer key.
 5. When verify exists: story-loop (Local default; Cloud on `unattended`) → PR → Bugbot → you merge.
 
