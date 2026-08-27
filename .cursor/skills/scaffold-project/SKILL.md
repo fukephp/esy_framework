@@ -36,7 +36,7 @@ Copy the full framework tree into the target **except**:
 - `.git/` (do not copy history)
 - `.cursor/plans/` (local noise)
 
-Keep: skills (including grill-me, grill-with-docs, story-loop, scaffold-project), `.cursor/loops/`, hooks, commands, rules, docs stubs, `refs/.gitkeep`, `AGENTS.md`, `DESIGN.md`, `README.md`, `.gitignore`, and this skill/command.
+Keep: skills (including grill-me, grill-with-docs, story-loop, scaffold-project, sync-framework), `.cursor/loops/`, hooks, commands, rules, docs stubs, `refs/.gitkeep`, `AGENTS.md`, `DESIGN.md`, `README.md`, `.gitignore`, and this skill/command.
 
 ## Steps (agent executes — no committed script)
 
@@ -52,11 +52,11 @@ Keep: skills (including grill-me, grill-with-docs, story-loop, scaffold-project)
    - `.cursor/plans` was not copied (or is absent/empty)
 8. Reply with the new path and: open that folder as the Cursor workspace, then run **grill-me** before filling product/architecture.
 9. Do **not** start grill-me automatically while still in `esy_framework`.
-10. Do **not** sync this framework into existing old projects (v1). Do not scaffold application code unless the user asks in a later step.
+10. Do not scaffold application code unless the user asks in a later step. To update an **existing** sibling later, use **sync-framework** / `/sync-framework <name>` — not this skill.
 
 ## Out of scope (v1)
 
 - App/stack generators (Laravel, React, Docker, etc.)
 - Auto-filling `docs/mvp/` or `docs/architecture/`
-- Syncing framework updates into already-scaffolded projects
+- Propagating into existing projects (use **sync-framework** instead)
 - A committed `scripts/scaffold-project.ps1`
