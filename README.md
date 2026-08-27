@@ -49,7 +49,13 @@ Ask the agent to **scaffold a project** / **new project from framework** / **boo
 
 ## Improving this template
 
-Change `esy_framework` here when you want better structure for the next scaffold. New projects get the update; already-scaffolded repos are not synced in v1.
+Change `esy_framework` here when you want better structure for the next scaffold. New projects get the update on scaffold. To push allowlisted Cursor defaults into an existing sibling project:
+
+```text
+/sync-framework esyres_project
+```
+
+See `.cursor/skills/sync-framework/SKILL.md` (overwrite allowlist + summary; one name per run; does not touch CONTEXT, product docs, or story keys).
 
 ## Getting started (in a project)
 

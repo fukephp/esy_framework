@@ -38,4 +38,4 @@ To copy this layout into a sibling folder under `Projects/`, use the **scaffold-
 
 ## Improving this template
 
-Edit `esy_framework` directly when you want better defaults for future projects. New scaffolds pick up those changes. Do not sync framework updates into already-scaffolded projects (v1). Do not invent a separate “improve framework” skill.
+Edit `esy_framework` directly when you want better defaults for future projects. New scaffolds pick up those changes. To propagate allowlisted Cursor defaults into an already-scaffolded sibling, use **sync-framework** (`.cursor/skills/sync-framework/`, `/sync-framework <name>`). Do not invent a separate “improve framework” skill — edit this repo, then sync.
