@@ -8,7 +8,7 @@ Prefer diagrams that match `docs/architecture/` and `docs/mvp/`. Framework-how d
 
 | Diagram | File | Use |
 |---------|------|-----|
-| Lifecycle | [lifecycle.md](./lifecycle.md) | Scaffold → lock → grill → answer key → story-loop / plan-gate → PR |
+| Lifecycle | [lifecycle.md](./lifecycle.md) | Once per project (scaffold → lock) then once per story (grill → draft key → you approve → story-loop / plan-gate → PR) |
 | Truth map | [truth-map.md](./truth-map.md) | Where product, architecture, and agent conventions live |
 
 Mermaid in these files is the editable source. Screenshot or export for presentation slides.
