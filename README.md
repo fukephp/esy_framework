@@ -18,7 +18,7 @@ No application code lives here. Use **scaffold-project** to copy this layout int
 
 | Diagram | File |
 |---------|------|
-| Lifecycle: scaffold → grill → story-loop / plan-gate → PR | [docs/diagrams/lifecycle.md](docs/diagrams/lifecycle.md) |
+| Lifecycle: once per project (scaffold → lock) then once per story (draft key → you approve → story-loop / plan-gate → PR) | [docs/diagrams/lifecycle.md](docs/diagrams/lifecycle.md) |
 | Truth map: where docs and `.cursor/` sit relative to the app | [docs/diagrams/truth-map.md](docs/diagrams/truth-map.md) |
 
 Index: [docs/diagrams/index.md](docs/diagrams/index.md). Mermaid is the source; screenshot for slides.
