@@ -66,6 +66,7 @@ flowchart LR
 | Agent context | `.cursor/CONTEXT.md` |
 | Domain glossary | `docs/glossary.md` (lazy; grill-with-docs) |
 | ADRs | `docs/adr/` (lazy; grill-with-docs) |
+| Stories inventory | `docs/stories/STORY-xx.md` (product grill persist) |
 | Story maps | `.cursor/loops/maps/` |
 | Answer keys | `.cursor/loops/answer-keys/` |
 | Playbook | `.cursor/loops/PLAYBOOK.md` |

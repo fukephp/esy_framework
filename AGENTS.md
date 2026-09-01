@@ -4,7 +4,7 @@ This git root is the Cursor/docs workspace. Application code is not part of this
 
 ## Layout
 
-- `docs/` — product (`docs/mvp/`) and architecture (`docs/architecture/`); also stories, tasks, diagrams; lazy `docs/glossary.md` and `docs/adr/` from grill-with-docs
+- `docs/` — product (`docs/mvp/`), architecture (`docs/architecture/`), stories (`docs/stories/`), diagrams; lazy `docs/glossary.md` and `docs/adr/` from grill-with-docs
 - `.cursor/` — rules, skills, commands, hooks
 - `refs/` — design packs when locked
 - `AGENTS.md` — this file
@@ -25,12 +25,12 @@ Read `.cursor/CONTEXT.md`. Prefer `docs/mvp/` and `docs/architecture/` over inve
 
 Before locking a plan or design, prefer grilling over guessing:
 
-- **grill-me** (`.cursor/skills/grill-me/`) — no app code, or a throwaway interview; writes nothing
-- **grill-with-docs** (`.cursor/skills/grill-with-docs/`, `/grill-with-docs`) — application code exists; writes `docs/glossary.md` and `docs/adr/` as terms and hard decisions lock. Do not treat `.cursor/CONTEXT.md` as a glossary.
+- **grill-me** (`.cursor/skills/grill-me/`) — no app code, or a throwaway interview; persist at end of topic (mvp, `docs/stories/STORY-xx.md`, architecture, CONTEXT as decided)
+- **grill-with-docs** (`.cursor/skills/grill-with-docs/`, `/grill-with-docs`) — application code exists; glossary + ADRs as terms/decisions lock; product/stories end-batch. Do not treat `.cursor/CONTEXT.md` as a glossary.
 
 ## Story loops
 
-For one story → one PR with an approved answer key, use **story-loop** (`.cursor/skills/story-loop/`, `/story-loop`) and `.cursor/loops/PLAYBOOK.md`. Runtime is Hybrid: Local default; Cloud on `unattended`. Coding loops need an app root with verify commands named in CONTEXT.
+For one story from `docs/stories/` → one PR with an approved answer key, use **story-loop** (`.cursor/skills/story-loop/`, `/story-loop`) and `.cursor/loops/PLAYBOOK.md`. Runtime is Hybrid: Local default; Cloud on `unattended`. Coding loops need an app root with verify commands named in CONTEXT. Story-loop consumes `STORY-xx` files; it does not create them.
 
 ## New projects from this framework
 

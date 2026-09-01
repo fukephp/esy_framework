@@ -10,7 +10,7 @@ This is **not** an unattended gauntlet that builds the whole MVP from a vague pr
 
 | Field | Role |
 |-------|------|
-| Stories source | Path to the stories doc or folder (`docs/mvp/…` or `docs/stories/…`) |
+| Stories source | `docs/stories/` (`STORY-xx.md`). Not `docs/mvp/`. Loop consumes; it does not create stories. |
 | App root | Folder where app commands and verify runners live |
 | Domain triggers | Extra fog-gate topics (e.g. auth, payments, new user-facing surface). **Empty by default** until the project locks them |
 
@@ -92,7 +92,7 @@ Every product check on the key must name a verifier: a test, a command, or `huma
 
 ## Flow
 
-1. Pick a story from the stories source named in CONTEXT.
+1. Pick a story from `docs/stories/`. If none exist, stop — a product grill must persist `STORY-xx` first.
 2. Apply the **fog gate**. If non-trivial: create/update `.cursor/loops/maps/STORY-xx.md` from `MAP_TEMPLATE.md`.
 3. Grill **one open decision at a time** (grill-me style; **grill-with-docs** once app code exists); update the map. Graduate fog into open decisions only when the question is sharp.
 4. When fog and opens are clear, **compile a draft** `.cursor/loops/answer-keys/STORY-xx.md` from Decisions so far + Out of scope + named verifiers. (Sharp path: draft the key without a map.)
@@ -119,6 +119,8 @@ Every product check on the key must name a verifier: a test, a command, or `huma
 ## Out of scope
 
 - Unattended whole-MVP or multi-epic gauntlet
+- Creating or inventing `docs/stories/STORY-xx.md` (product grill persist owns that)
+- Restoring `docs/tasks/`
 - Coding loops before the app root has a real verify runner
 - Docs-only “loops” that check markdown checklists with no runnable app
 - A second long unattended critic agent (Bugbot + human review is enough for story PRs)

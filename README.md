@@ -11,14 +11,14 @@ No application code lives here. Use **scaffold-project** to copy this layout int
 | `AGENTS.md` | How agents work in this repo |
 | `DESIGN.md` | Design pack index (fill when designs lock) |
 | `.cursor/` | Context, rules, skills, commands, hooks, loops |
-| `docs/` | Product, architecture, stories, tasks, diagrams |
+| `docs/` | Product, architecture, stories, diagrams |
 | `refs/` | Design reference packs (empty until you add them) |
 
 ## How it works (diagrams)
 
 | Diagram | File |
 |---------|------|
-| Lifecycle: once per project (scaffold → lock) then once per story (draft key → you approve → story-loop / plan-gate → PR) | [docs/diagrams/lifecycle.md](docs/diagrams/lifecycle.md) |
+| Lifecycle: once per project (scaffold → lock including persist stories) then once per story (draft key → you approve → story-loop / plan-gate → PR) | [docs/diagrams/lifecycle.md](docs/diagrams/lifecycle.md) |
 | Truth map: where docs and `.cursor/` sit relative to the app | [docs/diagrams/truth-map.md](docs/diagrams/truth-map.md) |
 
 Index: [docs/diagrams/index.md](docs/diagrams/index.md). Mermaid is the source; screenshot for slides.
@@ -42,9 +42,9 @@ Ask the agent to **scaffold a project** / **new project from framework** / **boo
 ### After scaffold
 
 1. Open the new folder as the Cursor workspace.
-2. Run **grill-me** before locking product and architecture (no app code yet).
-3. Fill `.cursor/CONTEXT.md` (including app root, stories source, and domain triggers when ready) and expand `docs/` as decisions lock.
-4. Add application code when ready; keep docs and `.cursor/` at the git root. After that, use **grill-with-docs** / `/grill-with-docs` so glossary and ADRs land on disk.
+2. Run **grill-me** before locking product and architecture (no app code yet). A finished product grill persists `docs/mvp/` and `docs/stories/STORY-xx.md`.
+3. Fill `.cursor/CONTEXT.md` (app root and domain triggers when ready). Stories source is `docs/stories/`.
+4. Add application code when ready; keep docs and `.cursor/` at the git root. After that, use **grill-with-docs** / `/grill-with-docs` so glossary, ADRs, and product/stories persist land on disk.
 5. When shipping one story with an answer key, use **story-loop** / `/story-loop` (see `.cursor/loops/PLAYBOOK.md`).
 
 ## Improving this template
@@ -60,7 +60,7 @@ See `.cursor/skills/sync-framework/SKILL.md` (overwrite allowlist + summary; one
 ## Getting started (in a project)
 
 1. Fill `.cursor/CONTEXT.md` for the product.
-2. Expand `docs/mvp/` and `docs/architecture/` as decisions lock (numbered docs when decisions lock — not pre-created empty files).
-3. Stress-test plans with **grill-me** (no code / writes nothing) or **grill-with-docs** (codebase + glossary/ADRs).
+2. Expand `docs/mvp/` and `docs/architecture/` as decisions lock (numbered docs when decisions lock — not pre-created empty files). Product grill persist also writes `docs/stories/STORY-xx.md`.
+3. Stress-test plans with **grill-me** (no code; persist at end of topic) or **grill-with-docs** (codebase; glossary/ADRs as they lock; product/stories end-batch).
 4. Add app code in a folder you choose; keep docs and `.cursor/` at the git root.
 5. Use **story-loop** for one story → one PR once verify commands exist.
