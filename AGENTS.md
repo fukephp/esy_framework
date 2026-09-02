@@ -4,7 +4,7 @@ This git root is the Cursor/docs workspace. Application code is not part of this
 
 ## Layout
 
-- `docs/` — product (`docs/mvp/`), architecture (`docs/architecture/`), stories (`docs/stories/`), diagrams; lazy `docs/glossary.md` and `docs/adr/` from grill-with-docs
+- `docs/` — product (`docs/mvp/`), architecture (`docs/architecture/`), stories (`docs/stories/`), diagrams; lazy `docs/glossary.md` and `docs/adr/` from domain-modeling (via grill-with-docs)
 - `.cursor/` — rules, skills, commands, hooks
 - `refs/` — design packs when locked
 - `AGENTS.md` — this file
@@ -23,10 +23,11 @@ Read `.cursor/CONTEXT.md`. Prefer `docs/mvp/` and `docs/architecture/` over inve
 
 ## Plans and designs
 
-Before locking a plan or design, prefer grilling over guessing:
+Before locking a plan or design, prefer **grilling** over guessing:
 
-- **grill-me** (`.cursor/skills/grill-me/`) — no app code, or a throwaway interview; persist at end of topic (mvp, `docs/stories/STORY-xx.md`, architecture, CONTEXT as decided)
-- **grill-with-docs** (`.cursor/skills/grill-with-docs/`, `/grill-with-docs`) — application code exists; glossary + ADRs as terms/decisions lock; product/stories end-batch. Do not treat `.cursor/CONTEXT.md` as a glossary.
+- **grilling** (`.cursor/skills/grilling/`) — default interview engine (rounds/frontier); auto before locking a plan
+- **grill-me** (`.cursor/skills/grill-me/`, `/grill-me`) — user-invoked; no app code, or a throwaway interview; persist at end of topic (mvp, `docs/stories/STORY-xx.md`, architecture, CONTEXT as decided)
+- **grill-with-docs** (`.cursor/skills/grill-with-docs/`, `/grill-with-docs`) — user-invoked when application code exists; glossary + ADRs as terms/decisions lock via domain-modeling; product/stories end-batch. Do not treat `.cursor/CONTEXT.md` as a glossary.
 
 ## Story loops
 

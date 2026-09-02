@@ -16,7 +16,7 @@ flowchart TD
     pick[Pick one story] --> fog{Fog gate}
     fog -->|non-trivial| map[Wayfinder-lite map]
     fog -->|sharp path| grill
-    map --> grill[grill one decision at a time]
+    map --> grill[grilling rounds]
     grill --> key[Draft answer key]
     key --> approve{You approve key?}
     approve -->|no| grill
@@ -35,7 +35,7 @@ flowchart TD
 ## Reading the main path
 
 1. **Once per project:** scaffold a sibling from this template, then lock product/architecture in CONTEXT, `docs/mvp/`, and `docs/architecture/`. A product grill persist also writes `docs/stories/STORY-xx.md` (one story → one PR). Do not invent behavior or stack.
-2. **Once per story:** pick one `STORY-xx` from `docs/stories/`. Clear fog (optional map) and grill open decisions (grill-me with no app code; grill-with-docs once a codebase exists). Story-loop consumes stories; it does not create them.
+2. **Once per story:** pick one `STORY-xx` from `docs/stories/`. Clear fog (optional map) and grill open decisions in grilling rounds (`/grill-me` with no app code; `/grill-with-docs` once a codebase exists). Story-loop consumes stories; it does not create them.
 3. When fog and opens are empty, the agent drafts the answer key in the same turn. There is no separate “OK to compile.”
 4. You approve the key. Every product check must name a verifier (test, command, or `human-only: …`; cap human-only at 1–2).
 5. When verify exists: story-loop (Local default; Cloud on `unattended`) → PR → Bugbot → you merge. Trivial Bugbot nits stay on the same PR; findings that contradict the key stop and wait for you.

@@ -11,9 +11,9 @@ description: >-
 
 Orient before execute. This skill reports a **classified inventory of every story**, then suggests up to **three** next picks. **#1 is always Recommended** — the best next move for current progress. It does **not** implement, draft answer keys, write status files, or start a grill interview.
 
-Apply the [story-loop fog gate](../story-loop/SKILL.md) as **tags and action type** (plan-gate vs code). Do **not** skip a foggy bottleneck. Do **not** name grill-me / grill-with-docs on pick lines.
+Apply the [story-loop fog gate](../story-loop/SKILL.md) as **tags and action type** (plan-gate vs code). Do **not** skip a foggy bottleneck. Do **not** name grill-me / grill-with-docs / grilling on pick lines.
 
-For execution after a pick, use **story-loop**. For fog on a specific story, the user starts **grill-me** (no app code) or **grill-with-docs** (codebase exists) separately.
+For execution after a pick, use **story-loop**. For fog on a specific story, the user starts **grilling** separately (`/grill-me` with no app code; `/grill-with-docs` when a codebase exists).
 
 ## Phrases
 
@@ -27,7 +27,7 @@ For execution after a pick, use **story-loop**. For fog on a specific story, the
 - **Read-only** — never write `docs/stories/`, story status fields, `progress.md`, maps, or answer keys.
 - Do not implement code unless the user asks separately.
 - Do not invent stories or product behavior beyond `docs/mvp/` and `docs/stories/`.
-- Do not start grill-me or grill-with-docs. Do not auto-suggest `/story-loop` or other handoff commands — list only.
+- Do not start grilling, grill-me, or grill-with-docs. Do not auto-suggest `/story-loop` or other handoff commands — list only.
 - If stories or architecture docs are still stubs, say so; list doc/scaffold blockers instead of fake story ranks.
 
 ## Workflow
@@ -174,6 +174,7 @@ Rules:
 |-------|------|
 | [story-loop](../story-loop/SKILL.md) | Execute one approved story → PR; fog-gate definition reused here as tags |
 | [custom-feature-skills](../custom-feature-skills/SKILL.md) | Implementation constraints during coding |
+| [grilling](../grilling/SKILL.md) | Default interview engine (rounds/frontier) — user starts separately |
 | [grill-me](../grill-me/SKILL.md) | Clarify fog (no app code; persist at end of topic) — user starts separately |
 | [grill-with-docs](../grill-with-docs/SKILL.md) | Clarify fog against codebase; glossary/ADRs as they lock; product/stories end-batch — user starts separately |
 

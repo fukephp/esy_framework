@@ -27,15 +27,17 @@ Do not invent a different stack. Do not scaffold app code unless the user asks.
 | `docs/architecture/` | Stack and system design |
 | `docs/stories/` | Implementable inventory (`STORY-xx.md`); one story → one PR |
 | `docs/diagrams/` | Diagrams |
-| `docs/glossary.md` | Domain glossary (lazy; grill-with-docs). Not `.cursor/CONTEXT.md`. |
-| `docs/adr/` | ADRs (lazy; grill-with-docs) |
+| `docs/glossary.md` | Domain glossary (lazy; domain-modeling via grill-with-docs). Not `.cursor/CONTEXT.md`. |
+| `docs/adr/` | ADRs (lazy; domain-modeling via grill-with-docs) |
 | `DESIGN.md` | Index of design packs under `refs/` |
 | `refs/` | Design packs (empty until locked) |
 | `rules/frontend/` | UI conventions when frontend files are in play |
 | `rules/backend/` | API and data conventions when backend files are in play |
 | `hooks/` | Scripts wired in `hooks.json` (session injects this file) |
-| `skills/grill-me/` | Relentless interview; end-of-topic persist (mvp, stories, architecture, CONTEXT) — default when there is no app code |
-| `skills/grill-with-docs/` | Same interview against a codebase; glossary + ADRs as they lock; product/stories end-batch |
+| `skills/grilling/` | Default interview engine (rounds/frontier); auto before locking a plan |
+| `skills/domain-modeling/` | Glossary + ADRs as they lock (via grill-with-docs) |
+| `skills/grill-me/` | User-invoked grilling + end-of-topic persist (`/grill-me`) |
+| `skills/grill-with-docs/` | User-invoked grilling against a codebase; glossary + ADRs as they lock; product/stories end-batch (`/grill-with-docs`) |
 | `skills/scaffold-project/` | Copy this framework into a new sibling project under `Projects/` |
 | `skills/sync-framework/` | Propagate allowlisted Cursor defaults into one existing sibling (`/sync-framework`) |
 | `skills/story-loop/` | Story-sized Loop Engineering: answer key → Hybrid implement → Bugbot |
@@ -47,7 +49,7 @@ Do not invent a different stack. Do not scaffold app code unless the user asks.
 | `skills/pricing-page/` | Marketing pricing pages |
 | `skills/build-awwwards-quality-sites/` | Marketing polish |
 | `loops/` | Story-loop playbook, Wayfinder-lite maps, answer-key templates, and per-story keys |
-| `commands/` | Slash workflows (`/generate-docs`, `/run-tests`, `/scaffold-project`, `/sync-framework`, `/story-loop`, `/grill-with-docs`) |
+| `commands/` | Slash workflows (`/generate-docs`, `/run-tests`, `/scaffold-project`, `/sync-framework`, `/story-loop`, `/grill-me`, `/grill-with-docs`) |
 
 ## How to follow this file
 
@@ -56,7 +58,7 @@ Do not invent a different stack. Do not scaffold app code unless the user asks.
 3. Do not expand scope into later phases unless the user asks.
 4. Update this file when a locked product or architecture decision lands.
 5. Before UI work, read root `DESIGN.md`, then the matching pack under `refs/` if it exists.
-6. Before locking a plan or design: **grill-me** when there is no app code (persist at end of topic). **grill-with-docs** (`/grill-with-docs`) when application code exists — same interview; glossary + ADRs as they lock; product/stories end-batch.
+6. Before locking a plan or design: use **grilling** (rounds/frontier). User starts `/grill-me` (no app code; persist at end of topic) or `/grill-with-docs` (app code; glossary + ADRs as they lock; product/stories end-batch).
 7. To bootstrap a new sibling project from this framework, use **scaffold-project** or `/scaffold-project`. To propagate allowlisted defaults into an existing sibling, use **sync-framework** or `/sync-framework <name>`.
 8. Use MengTo UI skills when the user asks for Tailwind, design-first prompting, landing, pricing, or marketing polish. Do not scaffold a marketing site unless asked.
-9. Story loops: use `skills/story-loop/` and `loops/PLAYBOOK.md` for one story from `docs/stories/` → one PR. Runtime is Hybrid: Local default; Cloud on `unattended` (short paste, no `briefs/` folder). Coding loops need an app root with real verify commands; until then use plan-gate only (map / answer key). Story-loop **consumes** `STORY-xx` files; it does not create them. Fill app root and domain triggers above when locked. Prefer grill-me while product fog is open and there is no app code; prefer grill-with-docs once a codebase exists. UI stories: embed desktop + mobile screenshots in the PR description (see playbook **PR visual evidence**).
+9. Story loops: use `skills/story-loop/` and `loops/PLAYBOOK.md` for one story from `docs/stories/` → one PR. Runtime is Hybrid: Local default; Cloud on `unattended` (short paste, no `briefs/` folder). Coding loops need an app root with real verify commands; until then use plan-gate only (map / answer key). Story-loop **consumes** `STORY-xx` files; it does not create them. Fill app root and domain triggers above when locked. Clear fog with **grilling** rounds (`/grill-me` with no app code; `/grill-with-docs` once a codebase exists). UI stories: embed desktop + mobile screenshots in the PR description (see playbook **PR visual evidence**).

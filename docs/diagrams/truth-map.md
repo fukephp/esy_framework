@@ -15,7 +15,7 @@ flowchart LR
     subgraph cursorLayer[".cursor/ — agent operating system"]
       context["CONTEXT.md<br/>source of truth for .cursor/"]
       rules["rules/<br/>frontend · backend"]
-      skills["skills/<br/>grill-me · grill-with-docs · story-loop · scaffold · …"]
+      skills["skills/<br/>grilling · grill-me · grill-with-docs · story-loop · scaffold · …"]
       loops["loops/<br/>PLAYBOOK · maps · answer-keys"]
       commands["commands/<br/>slash workflows"]
       hooks["hooks/<br/>session injects CONTEXT"]
@@ -64,8 +64,8 @@ flowchart LR
 | Artifact | Path |
 |----------|------|
 | Agent context | `.cursor/CONTEXT.md` |
-| Domain glossary | `docs/glossary.md` (lazy; grill-with-docs) |
-| ADRs | `docs/adr/` (lazy; grill-with-docs) |
+| Domain glossary | `docs/glossary.md` (lazy; domain-modeling via grill-with-docs) |
+| ADRs | `docs/adr/` (lazy; domain-modeling via grill-with-docs) |
 | Stories inventory | `docs/stories/STORY-xx.md` (product grill persist) |
 | Story maps | `.cursor/loops/maps/` |
 | Answer keys | `.cursor/loops/answer-keys/` |

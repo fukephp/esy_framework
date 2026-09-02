@@ -94,7 +94,7 @@ Every product check on the key must name a verifier: a test, a command, or `huma
 
 1. Pick a story from `docs/stories/`. If none exist, stop — a product grill must persist `STORY-xx` first.
 2. Apply the **fog gate**. If non-trivial: create/update `.cursor/loops/maps/STORY-xx.md` from `MAP_TEMPLATE.md`.
-3. Grill **one open decision at a time** (grill-me style; **grill-with-docs** once app code exists); update the map. Graduate fog into open decisions only when the question is sharp.
+3. Grill open decisions in **grilling** rounds (`/grill-me`; **grill-with-docs** once app code exists); update the map. Graduate fog into open decisions only when the question is sharp.
 4. When fog and opens are clear, **compile a draft** `.cursor/loops/answer-keys/STORY-xx.md` from Decisions so far + Out of scope + named verifiers. (Sharp path: draft the key without a map.)
 5. **You approve** the answer key (Status `approved`; every product check names a verifier).
 6. Use the `story-loop` skill. Default (`story-loop STORY-xx`): implement in this chat against the key. Opt-in Cloud (`story-loop STORY-xx unattended`): emit a short paste block only — do not write a brief file.
@@ -137,5 +137,6 @@ Every product check on the key must name a verifier: a test, a command, or `huma
 - Skill: `.cursor/skills/story-loop/SKILL.md`
 - Product constraints while implementing: `.cursor/skills/custom-feature-skills/SKILL.md`
 - Tests command: `.cursor/commands/run-tests.md`
+- Grilling: `.cursor/skills/grilling/SKILL.md`
 - Grill-me: `.cursor/skills/grill-me/SKILL.md`
 - Grill-with-docs: `.cursor/skills/grill-with-docs/SKILL.md`

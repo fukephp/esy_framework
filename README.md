@@ -42,9 +42,9 @@ Ask the agent to **scaffold a project** / **new project from framework** / **boo
 ### After scaffold
 
 1. Open the new folder as the Cursor workspace.
-2. Run **grill-me** before locking product and architecture (no app code yet). A finished product grill persists `docs/mvp/` and `docs/stories/STORY-xx.md`.
+2. Run **grilling** / `/grill-me` before locking product and architecture (no app code yet). A finished product grill persists `docs/mvp/` and `docs/stories/STORY-xx.md`.
 3. Fill `.cursor/CONTEXT.md` (app root and domain triggers when ready). Stories source is `docs/stories/`.
-4. Add application code when ready; keep docs and `.cursor/` at the git root. After that, use **grill-with-docs** / `/grill-with-docs` so glossary, ADRs, and product/stories persist land on disk.
+4. Add application code when ready; keep docs and `.cursor/` at the git root. After that, use **grill-with-docs** / `/grill-with-docs` so glossary, ADRs (domain-modeling), and product/stories persist land on disk.
 5. When shipping one story with an answer key, use **story-loop** / `/story-loop` (see `.cursor/loops/PLAYBOOK.md`).
 
 ## Improving this template
@@ -61,6 +61,6 @@ See `.cursor/skills/sync-framework/SKILL.md` (overwrite allowlist + summary; one
 
 1. Fill `.cursor/CONTEXT.md` for the product.
 2. Expand `docs/mvp/` and `docs/architecture/` as decisions lock (numbered docs when decisions lock — not pre-created empty files). Product grill persist also writes `docs/stories/STORY-xx.md`.
-3. Stress-test plans with **grill-me** (no code; persist at end of topic) or **grill-with-docs** (codebase; glossary/ADRs as they lock; product/stories end-batch).
+3. Stress-test plans with **grilling** (default engine). User starts `/grill-me` (no code; persist at end of topic) or `/grill-with-docs` (codebase; glossary/ADRs as they lock; product/stories end-batch).
 4. Add app code in a folder you choose; keep docs and `.cursor/` at the git root.
 5. Use **story-loop** for one story → one PR once verify commands exist.
